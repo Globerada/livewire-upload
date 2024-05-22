@@ -1,41 +1,44 @@
-# Servicio de Subida de Imágenes
+# Image Upload Service
 
-Este proyecto es un servicio de subida de imágenes construido con Laravel y Livewire. Permite a los usuarios subir imágenes a un servidor y proporciona una URL para cada imagen subida.
+This project is an image upload service built with Laravel and Livewire. It allows users to upload images to a server and provides a URL for each uploaded image.
 
-## Características
+## Features
 
--   Subida de imágenes con vista previa en tiempo real
--   Generación de URL para imágenes subidas
--   Validación de tipos de archivos y tamaño de archivos
--   Soporte para múltiples formatos de imagen (configurable)
+-   Real-time image upload with preview
+-   URL generation for uploaded images
+-   File type and size validation
+-   Support for multiple image formats (configurable)
 
-## Tecnologías utilizadas
+## Technologies Used
 
--   Laravel: un marco de trabajo PHP para la construcción de aplicaciones web siguiendo el patrón MVC.
--   Livewire: una biblioteca de Laravel para la creación de componentes dinámicos en el lado del servidor.
--   (Otras bibliotecas listadas en `composer.json`)
+-   Laravel: A PHP framework for building web applications following the MVC pattern.
+-   Livewire: A Laravel library for building dynamic server-side components.
+-   (Other libraries listed in `composer.json`)
 
-## Instalación
+## Installation
 
-1. Clona este repositorio en tu máquina local
-2. Navega a la carpeta del proyecto en tu terminal
-3. Ejecuta `composer install` para instalar las dependencias del proyecto
-4. Copia `.env.example` a `.env` y configura tus variables de entorno
-5. Ejecuta `php artisan key:generate` para generar una clave de aplicación
-6. Ejecuta `php artisan serve` para iniciar el servidor de desarrollo
+1. Clone this repository to your local machine
+2. Navigate to the project folder in your terminal
+3. Run `composer install` to install the project dependencies
+4. Run `npm install` to install the necessary Node.js packages
+5. Copy `.env.example` to `.env` and configure your environment variables
+6. Run `php artisan key:generate` to generate an application key
+7. Run `php artisan migrate` to set up the database
+8. Run `php artisan storage:link`. On shared hosting, you may need to use `php artisan storage:link --relative` if you get a 403 when loading images
+9. Run `npm run build` to compile your assets
 
-## Configuración
+## Configuration
 
-Puedes configurar los tipos de archivos permitidos y el tamaño máximo de archivo en el archivo de configuración `config/filesystems.php` bajo las claves `upload.allowed_file_types` y `upload.max_file_size` respectivamente.
+You can configure the allowed file types and maximum file size in the `config/filesystems.php` configuration file under the `upload.allowed_file_types` and `upload.max_file_size` keys respectively.
 
-## Uso
+## Usage
 
-Navega a la URL de tu aplicación en tu navegador para ver la interfaz de subida de imágenes. Selecciona un archivo para subir y haz clic en el botón de subida. Una vez que la imagen se ha subido, se te proporcionará una URL que puedes usar para acceder a la imagen.
+Navigate to your application's URL in your web browser to see the image upload interface. Select a file to upload and click the upload button. Once the image has been uploaded, you will be provided with a URL that you can use to access the image.
 
-## Contribución
+## Contribution
 
-Las contribuciones son bienvenidas. Por favor, abre un problema o una solicitud de extracción si tienes algo que te gustaría añadir o cambiar.
+Contributions are welcome. Please open an issue or a pull request if you have something you would like to add or change.
 
-## Licencia
+## License
 
-Este proyecto está licenciado bajo la licencia MIT.
+This project is licensed under the MIT license.

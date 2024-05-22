@@ -30,11 +30,11 @@ class Uploader extends Component
                 'file_path' => $filePath = $file->storePublicly('images', 'public'),
                 'user_id' => auth()->id(),
             ]);
-            // Image::load(storage_path('app/public/' . $filePath))
-            //     ->width(200)
-            //     ->height(200)
-            //     ->optimize()
-            //     ->save();
+            Image::load(storage_path('app/public/' . $filePath))
+                ->width(200)
+                ->height(200)
+                ->optimize()
+                ->save();
         });
 
         $this->dispatch('refresh')->to('uploaded-files');

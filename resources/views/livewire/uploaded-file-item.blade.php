@@ -50,6 +50,6 @@
         var copyText = document.getElementById(elementId);
         copyText.select();
         document.execCommand("copy");
-        alert("URL copiada: " + copyText.value);
+        alert("Copied! " + copyText.value);
     }
 </script>
