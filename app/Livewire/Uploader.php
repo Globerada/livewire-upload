@@ -25,14 +25,16 @@ class Uploader extends Component
         $this->validate();
 
         collect($this->files)->each(function ($file) {
+
             File::create([
                 'file_name' => $name = $file->getClientOriginalName(),
                 'file_path' => $filePath = $file->storePublicly('images', 'public'),
                 'user_id' => auth()->id(),
             ]);
+
             Image::load(storage_path('app/public/' . $filePath))
-                ->width(200)
-                ->height(200)
+                // ->width(200)
+                // ->height(200)
                 ->optimize()
                 ->save();
         });
