@@ -31,7 +31,7 @@ class UploadedFiles extends Component
 
         $this->authorize('delete', $file);
 
-        Storage::delete($file->file_path);
+        Storage::disk('public')->delete($file->file_path);
 
         $file->delete();
     }
